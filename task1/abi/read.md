@@ -1,6 +1,11 @@
 ## 1.安装abigen
 go install github.com/ethereum/go-ethereum/cmd/abigen@latest
 ## 2.生成abi文件 cd ./abi
+### 使用solc 编译合约
+solc --bin MyToken.sol
+### 使用solc 生成abi文件
+solc --abi MyToken.sol
+### 生成go文件
 abigen --abi MyToken.abi --pkg abi --type MyToken --out MyToken.go
 ## 3.重新整理依赖
 go mod tidy
