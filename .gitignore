@@ -12,3 +12,5 @@
 #idea ignore
 /.idea
 *.iml
+#env ignore
+.env
